@@ -16,7 +16,7 @@ class WxxcxTest extends TestCase
             'code2session_url' => "https://api.weixin.qq.com/sns/jscode2session?appid=%s&secret=%s&js_code=%s&grant_type=authorization_code",
         ];
 
-        $this->wxxcx = new Itpp\Wxxcx\Wxxcx($config);
+        $this->wxxcx = new E421083458\Wxxcx\Wxxcx($config);
     }
 
 

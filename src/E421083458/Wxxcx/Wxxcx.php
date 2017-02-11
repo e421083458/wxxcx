@@ -1,5 +1,5 @@
 <?php
-namespace Itpp\Wxxcx;
+namespace E421083458\Wxxcx;
 
 
 use Ixudra\Curl\Facades\Curl;
