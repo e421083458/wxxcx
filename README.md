@@ -6,7 +6,11 @@ Wechat applet plugins for Laravel 5.
 
 ## Notes
 
-Branch dev-master is for development and is UNSTABLE!
+Api | 说明 | 对应方法
+---|---|---
+[wx.login](https://mp.weixin.qq.com/debug/wxadoc/dev/api/api-login.html) | 登录 | $obj->getLoginInfo
+[wx.getUserInfo](https://mp.weixin.qq.com/debug/wxadoc/dev/api/open.html#wxgetuserinfoobject) | 获取用户信息 | $obj->getUserInfo($encryptedData,$iv);
+
 
 ## Installation
 
