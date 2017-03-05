@@ -60,12 +60,13 @@ class Wxxcx
     private function authCodeAndCode2session($code){
         $code2session_url = sprintf($this->code2session_url,$this->appId,$this->secret,$code);
         $jsonData = Curl::to($code2session_url)->get();
-        $this->authInfo = json_decode($jsonData,true);
+        $this->authInfo = json_decode($jsonData, true);
         if(!isset($this->authInfo['openid'])){
             throw new \Exception('weixin_session_expired');
         }
-        $this->openId = isset($jsonArr['openid']) ? $jsonArr['openid'] : "" ;
-        $this->sessionKey = isset($jsonArr['session_key']) ? $jsonArr['session_key'] : "" ;
+        $openId = $this->authInfo['openid'];
+        $session_key = $this->authInfo['session_key'];
+        $this->openId = isset($openId) ? $openId : "" ;
+        $this->sessionKey = isset($session_key) ? $session_key : "" ;
     }
-
 }
